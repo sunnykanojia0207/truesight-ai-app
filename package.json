@@ -1,0 +1,22 @@
+{
+  "name": "truesight-ai",
+  "version": "1.0.0",
+  "description": "AI Real vs Fake Content Detector",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "docker-compose up",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:ai-engine": "cd ai-engine && python -m uvicorn main:app --reload --port 8000",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build"
+  },
+  "keywords": ["ai", "deepfake", "detection", "verification"],
+  "author": "",
+  "license": "MIT"
+}
